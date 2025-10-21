@@ -1,0 +1,214 @@
+/* General Styling & Reset */
+:root {
+    --primary-color: #007bff; /* Blue for buttons */
+    --secondary-color: #28a745; /* Green for success/copy */
+    --background-dark: #121212; /* Dark background */
+    --card-background: #1e1e1e; /* Slightly lighter for cards */
+    --text-light: #ffffff; /* White text */
+    --text-muted: #aaaaaa; /* Grey for small text */
+    --border-color: #333333;
+    --instagram-color: #E1306C;
+    --facebook-color: #4267B2;
+    --youtube-color: #FF0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+.container {
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation (Same as before) */
+header {
+    background-color: var(--card-background);
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.nav-btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Page Content & Cards */
+.page-content {
+    display: none;
+    padding-top: 20px;
+}
+
+.page-content.active {
+    display: block;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.prompt-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-left: 5px solid var(--primary-color);
+}
+
+/* --- NEW: Image Styling --- */
+.prompt-image {
+    width: 100%; /* Image will take full width of the card */
+    height: auto;
+    max-height: 350px; /* Set max height for mobile view */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+/* --- END NEW: Image Styling --- */
+
+
+.prompt-text {
+    white-space: pre-wrap;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.copy-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+
+.copy-btn.copied {
+    background-color: var(--secondary-color);
+    cursor: default;
+}
+
+/* Developer Contact Card */
+.contact-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card h3 {
+    color: var(--primary-color);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.contact-card p, .contact-card .contact-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.contact-card .contact-link:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.contact-card small {
+    display: block;
+    color: var(--text-muted);
+    margin-top: 15px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* --- NEW: Social Media Styling --- */
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: var(--text-light);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon .fa-instagram:hover {
+    color: var(--instagram-color);
+}
+
+.social-icon .fa-facebook-f:hover {
+    color: var(--facebook-color);
+}
+
+.social-icon .fa-youtube:hover {
+    color: var(--youtube-color);
+}
+/* --- END NEW: Social Media Styling --- */
